@@ -3,7 +3,7 @@ import openpyxl
 from datetime import datetime
 
 # 🔁 Replace with your Codeforces handle
-handle = "your handle here (string)"
+handle = "type your handle here"
 
 # 📄 Excel file name
 filename = "codeforces_log.xlsx"
