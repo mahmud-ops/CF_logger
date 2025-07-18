@@ -2,13 +2,13 @@ import requests
 import openpyxl
 from datetime import datetime
 
-# 🔁 Replace with your Codeforces handle
-handle = "type your handle here"
+# Replace with your Codeforces handle
+handle = "your handle"
 
-# 📄 Excel file name
+# Excel file name
 filename = "codeforces_log.xlsx"
 
-# 🧾 Try to load existing file or make a new one
+# Try to load existing file or make a new one
 try:
     wb = openpyxl.load_workbook(filename)
     sheet = wb.active
@@ -17,7 +17,7 @@ except FileNotFoundError:
     sheet = wb.active
     sheet.append(["Date", "Problem Name", "Rating", "Tags", "Link", "Verdict", "Personal Note"])
 
-# 🌐 Get submissions from Codeforces API
+# Get submissions from Codeforces API
 url = f"https://codeforces.com/api/user.status?handle={handle}&from=1&count=250"
 res = requests.get(url).json()
 
